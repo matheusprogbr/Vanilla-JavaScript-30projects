@@ -5,8 +5,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: darkgray;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+}
+
 /* HEADER */
-.header {
+body .header {
   padding: 2rem;
 
   background-color: #252525;
@@ -17,4 +26,103 @@
   font-size: 1.125rem;
 
   text-align: center;
+}
+
+/* DRUM */
+.drum {
+  max-width: 760px;
+  width: 90vw;
+
+  margin: 0 auto;
+  padding: 4rem 0;
+
+}
+
+.drum .item {
+  background: rgba(0, 0, 0, 0.4);
+
+  padding: 1rem;
+
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+
+  font-size: 1.5rem;
+
+  color: #fff;
+
+  transition: all 0.1s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drum .item+.item {
+  margin-top: 2rem;
+}
+
+.drum .item span {
+  color: #ffc600;
+}
+
+
+/* FOOTER */
+.footer {
+  text-align: center;
+
+  margin-top: auto;
+
+  padding: 2rem 0;
+}
+
+
+
+/* JAVASCRIPT */
+.item.playing {
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width:1100px) {
+  .footer::before {
+    content: 'Este site é responsivo apenas esteticamente. Para usa-lo é necessário um desktop';
+    display: block;
+    max-width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+@media(min-width:1100px) {
+  .drum {
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 1100px;
+  }
+
+  .drum .item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .5rem;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+
+  .drum .item+.item {
+    margin: 0;
+  }
+
+  /* JAVASCRIPT */
+  .item.playing {
+    transform: scale(1.1);
+  }
 }
