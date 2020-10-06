@@ -31,8 +31,8 @@ body {
 .clock {
   margin: 0 auto;
 
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   border: 20px solid #fff;
   border-radius: 50%;
 }
@@ -42,6 +42,7 @@ body {
 
   width: 100%;
   height: 100%;
+
   transform: translateY(-3px);
 }
 
@@ -53,6 +54,19 @@ body {
   top: 50%;
 
   background-color: #000;
+
+  transform-origin: 100%;
+  transform: rotate(90deg);
+
+  transition: all .05s cubic-bezier(0, 2.57, 0.58, 1);
+}
+
+.second-hand {
+  background-color: #03254c;
+}
+
+.min-hand {
+  background-color: #0859c6;
 }
 
 
