@@ -6,5 +6,3 @@ function handleUpdate() {
 }
 
 inputs.forEach(input => input.addEventListener('change', handleUpdate));
-
-controls.addEventListener('change', handleUpdate);
