@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+body {
+  background-color: #193549;
+  color: #fff;
+
+
+  text-align: center;
+  font-size: 1.5em;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+
+  padding: 2rem 0;
+}
+
+.js {
+  color: var(--base);
+}
+
+.controls {
+  padding: 4rem 0;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+
+  margin-top: auto;
+
+  font-size: 1.125rem;
+}
